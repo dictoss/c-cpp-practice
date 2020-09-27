@@ -2,9 +2,11 @@
 # PRACTICE for C
 
 - 参考資料
+    - https://ja.wikipedia.org/wiki/C言語
     - https://ja.wikipedia.org/wiki/ANSI_C
     - https://ja.wikipedia.org/wiki/キーワード_(C言語)
     - https://ja.wikipedia.org/wiki/C99
+    - https://ja.wikipedia.org/wiki/C11_(C言語)
 
 ## C言語の規格
 
@@ -63,5 +65,51 @@
 
 ### C11
 
+- 概要
+    - 2011年に策定されたC99の後継規格
+    - 策定途中は"C1X"という書き方をされていた
+
+- 言語仕様のメモ
+    - アライメントの仕様
+        - _Alignas指定子
+        - alignof演算子
+        - aligned_alloc関数
+        - <stdalign.h>ヘッダファイルの追加
+        - C99とC11の違い
+    - _Noreturn関数指定子と<stdnoreturn.h>ヘッダファイル。
+    - _Genericキーワードを使用した型ジェネリック式
+    - マルチスレッドのサポート
+        - _Atomic型修飾子 (<stdatomic.h>)
+        - _Thread_localストレージクラス指定子
+        - <threads.h>ヘッダ
+    - unicodeを表現
+        - <uchar.h>ヘッダ追加
+        - char16_tとchar32_t型
+        - u、U、u8リテラル接頭辞の追加
+    - gets()廃止
+        - gets_s()を使うように変更
+    - 無名構造体、無名共用体のサポート
+    - 静的アサーション
+        - 【調べる】
+    - fopen()のオープンモードで"x"の追加（排他オープンで使うO_CREAT|O_EXCLの用に振る舞う）
+    - quick_exit()の追加
+        - 【調べる】
+- C11とC17の違い
+    - 【調査中】
+- C11に対応しているかの判定
+    - #if __STDC_VERSION__ >= 201112L
+    - agccではgcc-4.6から利用可能
+    - clangではclang-3.1からサポート
+    - MSVCでは「Visual Studio バージョン 16.8 以降が必要です」
+        - https://docs.microsoft.com/ja-jp/cpp/overview/visual-cpp-language-conformance?view=vs-2019
+        - Visual Studio 2019のアップデート版の16.8からサポートしている
 
 ### C17
+
+- 概要
+
+- 言語仕様のメモ
+
+- C11とC17の違い
+
+- C17に対応しているかの判定
